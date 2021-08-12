@@ -39,15 +39,11 @@ test.innerHTML += p;
 
 function removeMovieFromMyList(index) {
     let myList = JSON.parse(localStorage.getItem('my_list'));
-    // let index;
-    //     for (let i=0; i < myList.length; i++) {
-    //         if (myList[i].id === ID) {
-    //             index = i;
-    //             break;
-    //         }
-    //     }
     if (index > -1) {
         myList.splice(index, 1);
       }
       localStorage.setItem('my_list',JSON.stringify(myList));
+
+      addHtmlContent();
+      document.getElementById("myModal").style.display = "none";
 }

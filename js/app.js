@@ -53,6 +53,7 @@ function addMovieToMyList(ID,title,year,poster,released,genre,director,actors,pl
         myList.push({'id': ID,'title': title, 'year': year, 'poster': poster,'released': released,'genre': genre,'director': director,'actors':actors,'plot':plot});
         localStorage.setItem('my_list',JSON.stringify(myList));
     } 
+    document.getElementById("myModal").style.display = "none";
 }
 
 function removeMovieFromMyList(ID) {
